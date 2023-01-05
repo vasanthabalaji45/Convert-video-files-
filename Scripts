@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in *.mov; do
+  ffmpeg -i "$file" -c:v libx264 -c:a aac -strict experimental "${file%.*}.mp4"
+done
