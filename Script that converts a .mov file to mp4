@@ -1,0 +1,27 @@
+To convert a .mov file to mp4 using ffmpeg, you can use the following command:
+
+ffmpeg -i input.mov -c:v libx264 -c:a aac -strict experimental output.mp4
+This command will convert the input.mov file to an output.mp4 file. The -c:v option specifies the video codec to use, and the -c:a option specifies the audio codec to use. The -strict experimental option is required because the aac codec is considered experimental.
+
+You can also use the following command to specify the desired bitrate for the output file:
+
+ffmpeg -i input.mov -c:v libx264 -b:v 500k -c:a aac -strict experimental output.mp4
+This command will create an output.mp4 file with a video bitrate of 500 kbps.
+
+To write a script to automate this process, you can use a shell script, Python script, or any other scripting language of your choice. Here is an example of a shell script that converts all .mov files in the current directory to mp4:
+
+#!/bin/bash
+
+for file in *.mov; do
+  ffmpeg -i "$file" -c:v libx264 -c:a aac -strict experimental "${file%.*}.mp4"
+done
+To use this script, save it to a file (e.g., convert.sh) and make it executable using the chmod command:
+
+chmod +x convert.sh
+You can then run the script using the following command:
+
+./convert.sh
+This script will convert all .mov files in the current directory to mp4 files.
+
+
+
