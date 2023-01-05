@@ -29,7 +29,6 @@ This command will create an output.mp4 file with a video bitrate of 500 kbps.
 To write a script to automate this process, you can use a shell script, Python script, or any other scripting language of your choice. Here is an example of a shell script that converts all .mov files in the current directory to mp4:<br>
 :red_circle:
 #!/bin/bash<br>
-<br>
 for file in *.mov; do<br>
   ffmpeg -i "$file" -c:v libx264 -c:a aac -strict experimental "${file%.*}.mp4"<br>
 done<br>
