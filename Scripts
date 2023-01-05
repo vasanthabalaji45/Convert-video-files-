@@ -1,6 +1,3 @@
-#Convert video files 
-#use ffmpeg as script that converts a .mov file to .mp4
-
 #!/bin/bash
 
 for file in *.mov; do
