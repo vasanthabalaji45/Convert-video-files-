@@ -1,7 +1,7 @@
 # Convert-video-files-
 Convert video files in linux using  ffmpeg <br>
 <br>
-:pick: Convert a video file from onre format to other <br>
+:pick: Convert a video file from one format to other <br>
 <br>
 :toolbox:ffmped <br>
 
